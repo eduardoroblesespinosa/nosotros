@@ -753,7 +753,7 @@
       pointer-events: none !important;
     }
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
   <script>
     $(document).ready(function () {
@@ -1436,7 +1436,32 @@
             .breadcrumb-container .separator {
             }
         </style>
-        <script></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	      <style>
+          .accordion-button:not(.collapsed) {
+            color: #fff;
+            background-color: #ff0000;
+            box-shadow: none;
+            font-size: 18px;
+          }
+
+          .accordion-body {
+            background-color: #213047;
+            color: #fff;
+            font-size: 14px;
+          }
+
+          .accordion-button.collapsed {
+            font-size: 18px;
+          }
+
+          .accordion-button:focus {
+            box-shadow: none
+          }
+          .accordion-item{
+            border:0;
+          }
+        </style>
       </div>
       <div class="post-inner thin ">
         <div class="entry-content">
@@ -1451,43 +1476,9 @@
                         <div class="kt-row-column-wrap kt-has-2-columns kt-gutter-default kt-v-gutter-default kt-row-valign-top kt-row-layout-equal kt-tab-layout-inherit kt-m-colapse-left-to-right kt-mobile-layout-row">
                           <div class="wp-block-kadence-column inner-column-1 kadence-column_5afc7f-0a">
                             <div class="kt-inside-inner-col">
-                              <h2>Nuestros Valores Más Importantes</h2>
+                              <div class="wp-block-image">
 
-                              <p>Nuestros valores son simples, fundamentales y universales. Nuestros clientes y el mercado continúan respondiendo positivamente a la forma en que defendemos nuestros principios, y es con estos valores que lideramos nuestro equipo. </p>
-
-                              <div class="wp-block-kadence-accordion alignnone">
-
-                                <div class="set">
-                                  <a href="#">
-                                    MISIÓN
-                                    <i><img src="./Careers – VBC_files/info.png" width="24" height="24" /></i>
-                                  </a>
-                                  <div class="content">
-                                    <p>Nuestra misión es la de promover la fabricación de nuestros productos, servicios y logística en el mercado nacional e internacional con el fin de satisfacer las necesidades del cliente con productos de alta cálidad.</p>
-
-                                  </div>
-                                </div>
-                                <div class="set">
-                                  <a href="#">
-                                    VISIÓN
-                                    <i class=""><img src="./Careers – VBC_files/info.png" width="24" height="24" /></i>
-                                  </a>
-                                  <div class="content">
-                                    <p> Continuar siendo los líderes en la fabricación, diseño, remodelación e instalación simplificada con base en nuestro sincretismo de ética y honestidad.</p>
-
-                                  </div>
-                                </div>
-                                <div class="set">
-                                  <a href="#">
-                                    VALORES
-                                    <i class=""><img src="./Careers – VBC_files/info.png" width="24" height="24" /></i>
-                                  </a>
-                                  <div class="content">
-                                    <p>Compromiso | Confianza | Honestidad | Responsabilidad | Seguridad | Certeza</p>
-
-                                  </div>
-                                </div>
-
+                                <div id="chartdiv"></div>
                               </div>
                               
                             </div>
@@ -1495,9 +1486,47 @@
 
                           <div class="wp-block-kadence-column inner-column-2 kadence-column_6e410f-a3">
                             <div class="kt-inside-inner-col">
-                              <div class="wp-block-image">
+                              <h2>Nuestros Valores Más Importantes</h2>
 
-                                <div id="chartdiv"></div>
+                              <p>Nuestros valores son simples, fundamentales y universales. Nuestros clientes y el mercado continúan respondiendo positivamente a la forma en que defendemos nuestros principios, y es con estos valores que lideramos nuestro equipo. </p>
+
+                              <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                  <div class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      SEGURIDAD
+                                    </button>
+                                  </div>
+                                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                      La <strong>seguridad</strong> de nuestro personal, clientes y usuarios finales que usan las cocinas que construimos es de <code>.suma-importancia</code>, para todos los empleados.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <div class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      CALIDAD
+                                    </button>
+                                  </div>
+                                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                      Para  <strong>garantizar</strong>  que nuestros clientes siempre reciban un servicio de calidad, <code>.mejoramos-constantemente</code>, nuestros productos y soluciones.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <div class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      EFICIENCIA
+                                    </button>
+                                  </div>
+                                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                    La <strong>remodelación</strong> actual responde a la pregunta: "¿Cómo podemos mejorar constantemente el proceso de remodelación de un espacio?" Por tanto, se requieren  <code>.procesos-eficientes</code>, y nuevas formas de pensar para innovar.
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1799,6 +1828,7 @@
       </div>
     </div>
   </footer><!-- #site-footer -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script id="getwid-blocks-frontend-js-js-extra">var Getwid = {"settings":{"date_time_utc":"2021-07-13 14:31:31","google_api_key":""},"ajax_url":"https:\/\/www.vbc.co\/wp-admin\/admin-ajax.php","nonces":{"recaptcha_v2_contact_form":"50d83e0532"}};</script>
   <script src="./Careers – VBC_files/frontend.blocks.js" id="getwid-blocks-frontend-js-js"></script>
   <script src="./Careers – VBC_files/wp-polyfill.min.js" id="wp-polyfill-js"></script>
